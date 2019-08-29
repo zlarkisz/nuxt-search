@@ -25,7 +25,7 @@
 		<v-list three-line >
 			<template v-for="(item, index) in allCards">
 				<v-list-item
-				 :key="index"
+					:key="index"
 				>
 					<v-list-item-avatar>
 						<v-img v-if="item && item.image_uris && item.image_uris.normal" :src="item.image_uris.normal"></v-img>
@@ -47,8 +47,8 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
 data () {
 	return {
-	  search: '',
-	  timeout: new Date()
+	search: '',
+	timeout: new Date()
 	}
 },
 methods: {

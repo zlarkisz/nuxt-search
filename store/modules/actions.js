@@ -3,8 +3,8 @@ import axios from 'axios'
 export default {
   async fetchCards({ commit }, search) {
     try {
-      commit('loading/downloadPercent', 0, { root: true });
       commit('loading/setLoading', true, { root: true });
+      commit('loading/downloadPercent', 0, { root: true });
       const {
         data: {
           data: cardsList
@@ -13,8 +13,8 @@ export default {
       commit('updateCardsList', cardsList.filter(card => {
         return card.name.toLowerCase().includes(search.toLowerCase())
       }));
-      commit('loading/downloadPercent', 100, { root: true })
       commit('loading/setLoading', false, { root: true });
+      commit('loading/downloadPercent', 100, { root: true });
     } catch (e) {
       console.log(e.message);
     }

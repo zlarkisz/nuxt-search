@@ -1,6 +1,6 @@
 export default {
   setLoading(state, payload) {
-    state.setLoading = payload
+    state.loading = payload
   },
   downloadPercent(state, payload) {
     state.downloadPercent = payload
